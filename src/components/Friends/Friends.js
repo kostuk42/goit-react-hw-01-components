@@ -10,7 +10,7 @@ const Friends = ({friends}) => (
                     {
                         backgroundColor: friend.isOnline ? "green" : "red"
                     }
-                }></span>
+                }> </span>
                 <img className={styles.avatar} src={friend.avatar} alt="" width="48" />
                 <p className="name">{ friend.name }</p>
             </li>

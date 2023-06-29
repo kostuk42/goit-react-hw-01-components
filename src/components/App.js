@@ -9,13 +9,14 @@ import statsData from '../statistical-data.json';
 import Statistics from './Statistics/Statistics.js';
 import Friends from './Friends/Friends.js';
 import TransactionsHistory from './TransactionsHistory/TransactionsHistory.js';
+import './App.css';
 
 
 
 
 export default function App() {
     return (
-        <>
+        <div className="App">
             <Profile
                 name={user.name}
                 tag={user.tag}
@@ -33,7 +34,7 @@ export default function App() {
             <TransactionsHistory
                 transactions ={transactions}
             />
-        </>
+        </div>
     )
 
     
