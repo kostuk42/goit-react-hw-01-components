@@ -1,0 +1,25 @@
+.item {
+    display: flex;
+    align-items: center;
+    color: #122236;
+    padding: 10px;
+    margin: 10px;
+    /* border: 1px solid #71767F; */
+
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.avatar {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 5%;
+    /* border:  1px solid #71767F; */
+}
+.status {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    background-color: blue;
+    border-radius: 50%;
+}

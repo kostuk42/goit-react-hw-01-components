@@ -1,27 +1,16 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './Friends.module.css';
+import FriendListItem from "../FriendListItem/FriendListItem";
 
 const Friends = ({friends}) => (
     <ul className={styles.friendList}>
-        {friends.map(friend => (
-            <li className={styles.item} key={friend.id}>
-                <span className={styles.status} style={
-                    {
-                        backgroundColor: friend.isOnline ? "green" : "red"
-                    }
-                }> </span>
-                <img className={styles.avatar} src={friend.avatar} alt="" width="48" />
-                <p className="name">{ friend.name }</p>
-            </li>
-        ))}
-        
+        {friends.map(friend =><FriendListItem key={friend.id} {...friend} />)}
     </ul>
 )
 Friends.defaultProps = {
     friends: [
         {
-            
             avatar: 'https://picsum.photos/200/300',
             name: 'no name',
             isOnline: false,
@@ -30,14 +19,13 @@ Friends.defaultProps = {
     ]
 }
 Friends.propTypes = {
-    friends: propTypes.arrayOf(
-        propTypes.exact(
+    friends: PropTypes.arrayOf(
+        PropTypes.exact(
             {
-                
-                avatar: propTypes.string.isRequired,
-                name: propTypes.string.isRequired,
-                isOnline: propTypes.bool.isRequired,
-                id: propTypes.number.isRequired
+                avatar: PropTypes.string.isRequired,
+                name: PropTypes.string.isRequired,
+                isOnline: PropTypes.bool.isRequired,
+                id: PropTypes.number.isRequired
             }
         )
     )

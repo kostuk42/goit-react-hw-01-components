@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './TransactionsHistory.module.css';
 
 const TransactionsHistory = ({ transactions }) => (
@@ -30,13 +30,13 @@ TransactionsHistory.defaultProps = {
     currency: "no currency"
 }
 TransactionsHistory.propTypes = {
-    transactions: propTypes.arrayOf(
-        propTypes.exact(
+    transactions: PropTypes.arrayOf(
+        PropTypes.exact(
             {
-                id: propTypes.string.isRequired,
-                type: propTypes.string.isRequired,
-                amount: propTypes.string.isRequired,
-                currency: propTypes.string.isRequired
+                id: PropTypes.string.isRequired,
+                type: PropTypes.string.isRequired,
+                amount: PropTypes.string.isRequired,
+                currency: PropTypes.string.isRequired
              }
          )
     )
@@ -49,4 +49,3 @@ export default TransactionsHistory
 
     
     
-  

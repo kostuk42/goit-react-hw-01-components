@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './Statistics.module.css';
 
 const Statistics = ({title, statsData}) => (
@@ -27,13 +27,13 @@ Statistics.defaultProps = {
     ]
 }
 Statistics.propTypes = {
-    title: propTypes.string,
-    statsData: propTypes.arrayOf(
-        propTypes.exact(
+    title: PropTypes.string,
+    statsData: PropTypes.arrayOf(
+        PropTypes.exact(
             {
-               id: propTypes.string.isRequired,
-            label: propTypes.string.isRequired,
-            percentage: propTypes.number.isRequired 
+               id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired 
             }
         )
     )
